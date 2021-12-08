@@ -1,18 +1,17 @@
-window.addEventListener("load", inicio);
+window.addEventListener('load', iniciar);
 
-function inicio(){
-    var elementos=document.getElementById("enlace").value;
-    for(var i=0; i<elementos.elements.length;i++){
-        elementos.elements[i].addEventListener('onmouseover', puntero, false);
-    }
-}
+function iniciar() {
 
-function puntero(e){
-    if(e.currentTarget.name == "NameEnlace"){
-        enlaceID = document.getElementById("enlace") 
+    var nombre = document.formulario.nombre;
+    var direccion = document.formulario.nombre;
 
-        document.write.style.color='red';
-    }
+    nombre.addEventListener('blur', function(event) {
+        if ( event.target.value = " ") {
+            alert("El campo nombre debe estar relleno");
+        }
+    }, true);
+
+    
 }
 
 

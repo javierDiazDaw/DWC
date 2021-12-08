@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>fechas</title>
+
+</head>
+<body>
+
+	<script>
+		
+		//fecha actual
+		var fechaActual = new Date();
+
+		document.write(fechaActual.toDateString());	
+
+		document.write("<br><br>");
+
+		//fecha especifica
+		var fechaEspecifica = new Date(2013, 11, 8, 0, 0, 0 );
+
+		document.write(fechaEspecifica);	
+
+		/*Nota: JavaScript cuenta los meses de 0 a 11 :
+
+		Enero = 0 
+		Diciembre = 11*/
+
+		document.write("<br><br>");	
+
+		//fecha String
+		const fechaString = new Date("Januari 13, 2013 11:13:00");
+
+		document.write(fechaString);
+
+		document.write("<br><br>");	
+
+		//fecha milisegundos
+		const fechaMilisegundos = new Date(86400000);
+
+		document.write(fechaMilisegundos);
+
+		document.write("<br><br>");	
+
+
+
+		//diferencia entre dos fechas
+
+		const fecha1 = new Date("2015/3/25").getTime();
+
+		const fecha2 = new Date("2002/10/12").getTime();
+
+		diferencia = fecha1 - fecha2;
+
+		var fechaFinal = new Date(diferencia);
+
+		document.write(fechaFinal.toLocaleDateString());
+
+		document.write("<br><br>");	
+
+
+	</script>
+
+</body>
+</html>

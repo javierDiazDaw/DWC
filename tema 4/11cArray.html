@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	
+</head>
+<body>
+
+	<script type="text/javascript">
+
+
+		//con funcion flecha
+
+		let bar = (...args) => { 
+			let txt = ''; 
+			for(let i in args){ 
+				txt += args[i];
+			} 
+			return txt;
+		}	
+
+		//sin funcion flecha
+
+		/*function bar(){ 
+			let txt = ''; 
+			for(let i in arguments){ 
+				txt += arguments[i];
+			} 
+			return txt;
+		 }*/
+
+		 document.write(bar("hola", " buenas"));
+
+
+		
+	</script>	
+
+</body>
+</html>	

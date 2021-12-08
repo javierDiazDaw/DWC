@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+
+		var arr = new Array();
+		var final = "";
+
+		
+		do{
+
+			datos = prompt("Introduce los siguientes datos: ","nombre, apellidos, DNI, edad");
+
+			datos = datos.split(","); //metodo split trnaforma su contenido en un array
+			arr.push(datos);
+						
+			if(datos == " "){
+				final = datos;
+			}
+
+		}while(final != " "); 
+
+		function mostrarTodo (arr){
+
+			for (let item of arr) {
+			document.write(item+"<br>");
+			}
+
+		}
+
+		mostrarTodo(arr); //muestra un array bidimensional
+
+
+		mostrarDatos = prompt("Dime qué dato deseas mostrar por separado");
+
+		if (mostrarDatos == "apellido"){
+			pedirApellido = prompt("Escribe el apellido");
+			
+			mostrarApellido(arr, pedirApellido);
+			
+
+		}else if (mostrarDatos == "DNI"){
+			pedirDNI = prompt("Escribe el apellido");
+
+			mostrarDNI(arr, pedirDNI);
+
+		}else if (mostrarDatos == "edad"){
+			pedirEdad = prompt("Escribe la edad");
+
+			mostrarEdad(arr, pedirEdad);
+
+		}else{
+			document.write("Error");
+		}
+
+
+		function mostrarApellido (arr, pedirApellido){
+			
+			for (let item of arr) {
+
+				if (item[1].indexOf(pedirApellido) != -1){
+					document.write(item + "<br>"); 
+				}/*else{
+					document.write("No existe ese apellido");
+				}*/			
+			}
+		}
+
+		function mostrarDNI (arr, pedirDNI){
+			
+			for (let item of arr) {
+
+				if (item[2].indexOf(pedirDNI) != -1){
+					document.write(item + "<br>"); 
+				}/*else{
+					document.write("No existe ese DNI");
+				}*/			
+			}			
+		}
+
+		function mostrarEdad (arr, pedirEdad){
+			
+			for (let item of arr) {
+
+				if (item[3].indexOf(pedirEdad) != -1){
+					document.write(item + "<br>"); 
+				}/*else{
+					document.write("No existe esa edad");
+				}*/			
+			}			
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

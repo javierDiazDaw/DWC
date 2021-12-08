@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		function colocaEnMedio() {
+
+			var num = new Array(1,2,6,7);
+			var num2 = new Array (3,4,5);
+
+			num.splice(2,0, num2);
+
+			return num;
+		}
+
+		document.write(colocaEnMedio());
+
+		
+	</script>	
+
+</body>
+</html>	

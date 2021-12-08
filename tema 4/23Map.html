@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		
+		modulo = new Map();
+
+		modulo.set('DWECL','Desarrollo Web en Entorno Cliente'); 			
+		modulo.set('DIW','Diseño de Interfaces Web'); 
+		modulo.set('DWS','Desarrollo Web en Entorno Servidor'); 
+		modulo.set('EIE','Empresa y Iniciatima Empresarial'); 
+		modulo.set('DAW','Despliege de Aplicacion Web'); 
+					    
+
+		document.write("Hay " + modulo.size + " módulos almacenados."+ "<br><br>");
+		document.write("Mostración de los módulos:" + "<br>");
+
+		for(let elemento of modulo){
+			document.write(elemento + "<br>" );
+        }
+
+        
+		var claves = modulo.keys();
+		 
+		 for (let item of claves) {
+		 	document.write(item + "<br>");
+		 }	
+
+		let valores = modulo.values();
+		 
+		 for (let item of valores) {
+		 	document.write(item + "<br>");
+		 }	
+
+		let busqueda =  modulo.has('DAW');
+		document.write(busqueda + "<br>");
+
+		let eliminar =  modulo.delete('DAW');
+		document.write(eliminar + "<br><br>");
+
+	
+		//convertirlo en array con spread y luego usar sort
+
+		 let claves2 = modulo.keys();
+
+
+		 let arrayOrdenado  = [...claves2].sort();
+
+		for (let i of arrayOrdenado) {
+		 	document.write(i + "<br>");
+		 }
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

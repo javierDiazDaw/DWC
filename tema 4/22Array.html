@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+
+		var arr = new Array();
+		var final = "";
+		
+		do{
+			datos = prompt("Introduce los siguientes datos: ", "nombre, apellidos, DNI, edad");
+			datos = datos.split(",");
+			arr.push(datos);
+						
+			if(datos == " "){
+				final = datos;
+			}
+		}while(final != " ");
+
+		function mostrarTodo (arr){
+			for (let item of arr){
+			document.write(item+"<br>");
+			}
+		}
+
+		mostrarTodo(arr);
+
+
+		function mayorEdad (arr) {
+			let edadM = arr.filter(item => item[3] >= 18);
+			arr.push(edadM);
+
+			for (let mostrar of edadM){
+			document.write(mostrar);
+			}
+		}	
+
+		document.write("Lista de personas mayores de edad:" + "<br>");
+		mayorEdad(arr);
+		document.write("<br>");
+
+		function menorEdad (arr) {
+			let edadm = arr.filter(item => item[3] < 18);
+			 
+
+			arr.push(edadm);
+			
+
+			for (let mostrar of edadm){
+			edadTotal = 2021 - arr.item[3];	
+			document.write(mostrar + ": " + edadTotal);
+
+			}
+		}	
+
+		document.write("Lista de años de menores para alcanzar la mayoría de edad:" + "<br>");
+		menorEdad(arr);
+
+		
+
+
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

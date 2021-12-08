@@ -1,0 +1,37 @@
+</head>
+<body>
+
+	<script type="text/javascript">
+
+
+		//con funcion flecha
+
+		let doubleOddNumbers = (arr) => {
+        	return arr.filter((val) => {
+            return val % 2 !== 0;
+        }).map((val)=> {
+            return val *2;
+        	})
+    	}
+	
+
+		//sin funcion flecha
+
+		/*function doubleOddNumbers(arr){
+        	return arr.filter(function(val){
+            return val % 2 !== 0;
+        }).map(function(val){
+            return val *2;
+        	})
+    	}*/
+
+
+
+		 document.write(doubleOddNumbers([3]));
+
+
+		
+	</script>	
+
+</body>
+</html>	

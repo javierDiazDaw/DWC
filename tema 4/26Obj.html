@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+
+		
+		
+		class Punto {
+
+			constructor(x,y) {
+				this.x = x;
+				this.y = y;
+			};
+			
+			 ubicacion(x,y){	
+
+			 	var resultado;			
+
+				if (this.x>0 && this.y>0) {
+					resultado = "Arriba a la derecha";
+				}else if (this.x>0 && this.y<0) {
+					resultado = "Abajo a la derecha";
+				}else if (this.x <0 && this.y<0) {
+					resultado = "Abajo a la izquierda";
+				}else if (this.x <0 && this.y>0) {
+					resultado = "Abajo a la izquierda";
+				}else{
+					resultado = "ERROR";
+				}	
+					return resultado;
+				
+			}
+				
+		}
+
+		let coordenadas = new Punto (-4,-3);
+		document.write(coordenadas.ubicacion());
+
+		
+
+
+	</script>
+</head>
+<body>
+</body>
+</html>

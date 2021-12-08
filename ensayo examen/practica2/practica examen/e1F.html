@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script>
+
+		var expresion = /^[a-zA-Z]*$/;
+		var alfabeto = prompt("Escribe el texto");
+
+
+
+		function esAlfabetoEspaniol(){
+
+			if(expresion.test(alfabeto)){
+				return true;
+			}else{
+				return false;
+			}
+
+		}
+
+		alert(esAlfabetoEspaniol());
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ejercicio2</title>
+	<script type="text/javascript" src="ejer2.js"></script>
+</head>
+<body>
+	<form id="formulario1" name="formulario1" >
+		<label for="nombre">Nombre</label>
+		  <br>
+		  <input id="nombre" name="nombre" placeholder="nombre" required="required">
+		  <input id="apellidos" name="apellidos" placeholder="apellidos" required="required">
+		  <br><br>
+		  <label for="nombreUsuario">Nombre de usuario</label>
+		  <br>
+		  <input id="nombreUsuario" name="nombreUsuario"  required="required">
+		  <br><br>
+		  <label for="contrasenia">Contraseña</label>
+		  <br>
+		  <input id="contrasenia" type= "password" name="contraseña" >
+		  <br><br>
+		  <label for="confirmarContrasenia">Confirmar contraseña</label>
+		  <br>
+		  <input id="confirmarContrasenia" type= "password" name="confirmarContrasenia" >
+		  <br><br>
+		  <label for="fechaNacimiento">Fecha de nacimiento</label >
+		  <br>
+		   <label for="dia">Día</label >
+		  <input id="dia" name="dia" placeholder="día" required="required">
+		   <label for="mes">Mes</label >
+		  <select name="mes" id="mes">
+		  	<option value="enero"selected>enero</option>
+	  		<option value="febrero">febrero</option>
+	  		<option value="marzo">marzo</option>
+	  		<option value="abril">abril</option>
+	  		<option value="mayo">mayo</option>
+	  		<option value="junio">junio</option>
+	  		<option value="julio">julio</option>
+	  		<option value="agosto">agosto</option>
+	  		<option value="septiembre">septiembre</option>
+	  		<option value="octubre">octubre</option>
+	  		<option value="noviembre">noviembre</option>
+	  		<option value="diciembre">diciembre</option>
+		  </select>
+		   <label for="anio">Año</label >
+		  <input id="anio" name="anio" placeholder="año" required="required">
+		  <br><br>
+		  <label for="sexo">Sexo</label>
+		  <br>
+		  <select name="sexo" id = "sexo">
+	  		<option value="hombre"selected>hombre</option>
+	  		<option value="mujer">mujer</option>
+	  	  </select>
+		  <br><br>
+		  <label for="telefono">Teléfono móvil</label>
+		  <br>
+		  <input id="telefono" name="telefono" required="required">
+		  <br><br>
+		  <label for="correo">Tu dirección de correo electrónico actual</label>
+		  <br>
+		  <input id="correo" name="correo" required="required">
+		  <br><br>
+	      <input type="button" id="confirmar" name="confirmar" value="Confirmar"/>
+	  	<!--<input type = "button" value="Enviar">-->
+	</form> 	
+</body>
+</html>

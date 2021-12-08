@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+
+		var cadenaTexto = new Array();
+		var final = "";
+		
+		do{
+		
+			datos = prompt("Introduce los siguientes datos: ", "nombre, apellidos, DNI, fecha de nacimiento");
+
+			datos = datos.split(",");
+			cadenaTexto.push(datos);
+			//cadenaTexto += datos;
+			
+			if(datos == " "){
+				final = datos;
+			}
+
+		}while(final != " "); 
+
+		for (let index in cadenaTexto) {
+			document.write(cadenaTexto[index]+"<br>");
+		}
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

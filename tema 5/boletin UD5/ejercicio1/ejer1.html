@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ejercicio1</title>
+</head>
+<body>
+	
+	<form>
+	  <label for="nombre">Nombre</label>
+	  <br>
+	  <input id="nombre" name="nombre" placeholder="nombre" required="required">
+	  <input id="apellidos" name="apellidos" placeholder="apellidos" required="required">
+	  <br><br>
+	  <label for="nombreUsuario">Nombre de usuario</label>
+	  <br>
+	  <input id="nombreUsuario" name="nombreUsuario" placeholder="@gmail.com" required="required">
+	  <br><br>
+	  <label for="contraseña">Contraseña</label>
+	  <br>
+	  <input id="contraseña" type= "password" name="contraseña" alt="strongPass" required>
+	  <br><br>
+	  <label for="confirmarContraseña">Confirmar contraseña</label>
+	  <br>
+	  <input id="confirmarContraseña" type= "password" name="confirmarContraseña" alt="strongPass" required>
+	  <br><br>
+	  <label for="fechaNacimiento">Fecha de nacimiento</label >
+	  <br>
+	  <input id="dia" name="dia" placeholder="día" required="required">
+	  <select name="select">
+	  	<option value="value0"selected>mes</option>
+  		<option value="value1">enero</option>
+  		<option value="value2">febrero</option>
+  		<option value="value3">marzo</option>
+  		<option value="value1">abril</option>
+  		<option value="value2">mayo</option>
+  		<option value="value3">junio</option>
+  		<option value="value1">julio</option>
+  		<option value="value2">agosto</option>
+  		<option value="value3">septiembre</option>
+  		<option value="value3">octubre</option>
+  		<option value="value3">noviembre</option>
+  		<option value="value3">diciembre</option>
+	  </select>
+	  <input id="año" name="año" placeholder="año" required="required">
+	  <br><br>
+	  <label for="sexo">Sexo</label>
+	  <br>
+	  <select name="selectedSexo">
+  		<option value="value1"selected>hombre</option>
+  		<option value="value2">mujer</option>
+  	  </select>
+	  <br><br>
+	  <label for="telefono" min="6" max="6">Teléfono móvil</label>
+	  <br>
+	  <input id="telefono" name="telefono" required="required">
+	  <br><br>
+	  <label for="correo">Tu dirección de correo electrónico actual</label>
+	  <br>
+	  <input id="correo" name="correo" required="required">
+	  <br><br>
+	  <button type= "button">Enviar</button>
+	  <!--<input type = "button" value="Enviar">-->
+	</form>
+
+</body>
+</html>

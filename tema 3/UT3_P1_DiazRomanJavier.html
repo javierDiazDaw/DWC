@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		let expresion1 = /^@?[a-z]{7}\d{3}$/;
+
+		var cadenaTexto = "";
+		var final = "";
+
+		do{
+			var dato = prompt("Escribe un alias", "@nnnnnnn000").toLowerCase();
+
+			if(expresion1.test(dato) == true){
+				alert("nombre introducido:" + dato);
+				cadenaTexto += dato;
+			}else if(dato == "fin"){
+					final = dato;
+			}else if(expresion1.test(dato) == false){
+				alert("datos incorrectos");
+			}
+
+		}while( final != "fin");
+
+		function ventana(){
+			var v = window.open("","","scrollbars=1,height=2,width=2");
+                    v.document.write(cadenaTexto);
+		}
+
+		alert(cadenaTexto);
+	</script>
+	<a onclick="ventana();return false;" href="#">abrir</a>
+
+</body>
+</html>

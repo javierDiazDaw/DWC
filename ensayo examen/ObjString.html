@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		
+		//Replace: reemplaza una cadena por otra
+
+		let text = "Visit Microsoft!";
+		let result = text.replace("Microsoft", "King Barba");
+
+		document.write(result + "<br><br>");
+
+		let text2 = "Mr Blue has a blue house and a blue car";
+		let result2 = text2.replace(/blue/g, "red");
+
+		document.write(result2 + "<br><br>");
+
+		//Slice: muestra parte de la cadena
+
+		let text3 = "Hello world!";
+		let result3 = text3.slice(0, 5);
+
+		document.write(result3 + "<br><br>");
+
+		let result4 = text3.slice(3);
+
+		document.write(result4 + "<br><br>");
+
+
+		//charAt: muestra el caracter x del string
+
+		let text4 = "HELLO WORLD";
+		let letter = text4.charAt(0);
+
+		document.write(letter + "<br><br>");
+
+
+		//concat: una varios String
+
+		let texto = "Hello";
+		let texto2 = "world!";
+		let result5 = texto.concat(" ", texto2);
+
+
+		document.write(result5 + "<br><br>");
+
+		//indexOf: te dice en qué posición está parte del String (primera)
+
+		let texto3 = "Hello world, welcome to the universe.";
+		let texto4 = texto3.indexOf("o");
+
+		document.write(texto4 + "<br><br>");
+
+		//indexOf: te dice en qué posición está parte del String (última)
+
+		let texto6 = "Hola caracola.";
+		let result6 = texto6.lastIndexOf("a");
+
+		document.write(result6 + "<br><br>");
+
+		/*match: Busca una coincidencia entre una expresión regular y una cadena y devuelve las
+				 coincidencias o null si no ha encontrado nada.*/
+
+		let texto7 = "Oye como mola que la ola diga HOLA!";
+		let result9 = texto7.match(/ola/gi);
+
+		document.write(result9 + "<br><br>");
+
+		/*search: Busca una subcadena en la cadena y devuelve la posición dónde
+				  se encontró.*/
+
+		let text8 = "Mr. Blue has a blue house";
+		let position = text8.search("Blue");
+
+		document.write(position + "<br><br>");
+
+		/*substr: Extrae los caracteres de una cadena, comenzando en una
+				  determinada posición y con el número de caracteres indicado.*/	
+
+		let text9 = "Hello world!";
+		let result7 = text9.substr(0, 5);	
+
+		document.write(result7 + "<br><br>");
+
+		let result8 = text9.substr(3);
+
+		document.write(result8 + "<br><br>");
+
+		/*substring: Extrae los caracteres de una cadena entre dos índices
+					 especificados.*/
+
+		let text10 = "Hello world!";
+		let result10 = text10.substring(0, 5);
+
+		document.write(result10 + "<br><br>");
+
+		/*toLowerCase: Convierte una cadena en minusculas*/
+
+		let text11 = "Hello World!";
+		let result11 = text11.toLowerCase();
+
+		document.write(result11 + "<br><br>");
+
+		/*toUpperCase: Convierte una cadena en mayusculas*/
+
+		let text12 = "Hello World!";
+		let result12 = text12.toUpperCase();
+
+		document.write(result12 + "<br><br>");
+
+
+
+	</script>
+
+</body>
+</html>

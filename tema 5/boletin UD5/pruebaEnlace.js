@@ -3,8 +3,8 @@ window.addEventListener("load", inicio);
 function inicio(){
 
     var x = document.getElementById("enlace");
-x.addEventListener("mouseover", myFunction);
-x.addEventListener("mouseout", mySecondFunction);
+    x.addEventListener("mouseover", myFunction);
+    x.addEventListener("mouseout", mySecondFunction);
 }
 
 

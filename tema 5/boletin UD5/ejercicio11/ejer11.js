@@ -2,12 +2,19 @@ window.addEventListener('load', iniciar);
 
 function iniciar() {
 
-    var nombre = document.formulario.nombre;
-    var direccion = document.formulario.nombre;
+    var usu = document.getElementById("usuario");
+    var direc = document.getElementById("direccion");
+    
 
-    nombre.addEventListener('blur', function(event) {
+    usu.addEventListener('blur', function(event) {
         if ( event.target.value = " ") {
             alert("El campo nombre debe estar relleno");
+        }
+    }, true);
+
+    direc.addEventListener('blur', function(event) {
+        if ( event.target.value = " ") {
+            alert("El campo direccion debe estar relleno");
         }
     }, true);
 

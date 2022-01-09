@@ -3,7 +3,7 @@
 window.addEventListener("load", inicio);
 
 function inicio(){
-    let formulario = document.getElementById('confirmar');
+    let formulario = document.getElementById('button');
     formulario.addEventListener('click', validar);
 }
 

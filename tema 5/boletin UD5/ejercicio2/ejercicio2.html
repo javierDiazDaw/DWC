@@ -5,26 +5,26 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Ejercicio2</title>
-	<script type="text/javascript" src="ejer2.js"></script>
+	<script type="text/javascript" src="ejercicio2.js"></script>
 </head>
 <body>
 	<form id="formulario1" name="formulario1" >
 		<label for="nombre">Nombre</label>
 		  <br>
-		  <input id="nombre" name="nombre" placeholder="nombre" required="required">
-		  <input id="apellidos" name="apellidos" placeholder="apellidos" required="required">
+		  <input id="nombre" name="nombre" placeholder="nombre"  required="required">
+		  <input id="apellidos" name="apellidos" placeholder="apellidos"  required="required">
 		  <br><br>
 		  <label for="nombreUsuario">Nombre de usuario</label>
 		  <br>
-		  <input id="nombreUsuario" name="nombreUsuario"  required="required">
+		  <input id="nombreUsuario" name="nombreUsuario"  pattern="[A-Za-z\s]*">
 		  <br><br>
 		  <label for="contrasenia">Contraseña</label>
 		  <br>
-		  <input id="contrasenia" type= "password" name="contraseña" >
+		  <input id="contrasenia" type= "password" name="contraseña" pattern="[A-Za-z0-9!*$%]*">
 		  <br><br>
 		  <label for="confirmarContrasenia">Confirmar contraseña</label>
 		  <br>
-		  <input id="confirmarContrasenia" type= "password" name="confirmarContrasenia" >
+		  <input id="confirmarContrasenia" type= "password" name="confirmarContrasenia" pattern="[A-Za-z0-9!*$%]*">
 		  <br><br>
 		  <label for="fechaNacimiento">Fecha de nacimiento</label >
 		  <br>
@@ -57,13 +57,13 @@
 		  <br><br>
 		  <label for="telefono">Teléfono móvil</label>
 		  <br>
-		  <input id="telefono" name="telefono" required="required">
+		  <input id="telefono" name="telefono" pattern="[0-9]{9}">
 		  <br><br>
 		  <label for="correo">Tu dirección de correo electrónico actual</label>
 		  <br>
 		  <input id="correo" name="correo" required="required">
 		  <br><br>
-	      <input type="button" id="confirmar" name="confirmar" value="Confirmar"/>
+	      <input type="button" id="button" value="Aceptar"/>
 	  	<!--<input type = "button" value="Enviar">-->
 	</form> 	
 </body>

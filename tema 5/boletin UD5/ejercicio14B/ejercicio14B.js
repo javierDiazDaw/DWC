@@ -2,6 +2,7 @@ window.addEventListener("load", inicio);
 
 function inicio(){
     let formulario = document.getElementById('confirmar');
+    var cafe = localStorage.getItem("cafe");
 
     var nombre = document.getElementById("nombre").value; 
     //var habitacion= document.getElementById("habitacion").value; 

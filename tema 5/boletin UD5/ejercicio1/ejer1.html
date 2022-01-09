@@ -10,20 +10,20 @@
 	<form>
 	  <label for="nombre">Nombre</label>
 	  <br>
-	  <input id="nombre" name="nombre" placeholder="nombre" required="required">
-	  <input id="apellidos" name="apellidos" placeholder="apellidos" required="required">
+	  <input id="nombre" name="nombre" placeholder="nombre" pattern="[A-Za-z\s]*">
+	  <input id="apellidos" name="apellidos" placeholder="apellidos" pattern="[A-Za-z\s]*">
 	  <br><br>
 	  <label for="nombreUsuario">Nombre de usuario</label>
 	  <br>
-	  <input id="nombreUsuario" name="nombreUsuario" placeholder="@gmail.com" required="required">
+	  <input id="nombreUsuario" name="nombreUsuario" placeholder="@gmail.com" pattern="[A-Za-z\s]*">
 	  <br><br>
 	  <label for="contraseña">Contraseña</label>
 	  <br>
-	  <input id="contraseña" type= "password" name="contraseña" alt="strongPass" required>
+	  <input id="contraseña" type= "password" name="contraseña" pattern="[A-Za-z0-9!*$%]*">
 	  <br><br>
 	  <label for="confirmarContraseña">Confirmar contraseña</label>
 	  <br>
-	  <input id="confirmarContraseña" type= "password" name="confirmarContraseña" alt="strongPass" required>
+	  <input id="confirmarContraseña" type= "password" name="confirmarContraseña" pattern="[A-Za-z0-9!*$%]*">
 	  <br><br>
 	  <label for="fechaNacimiento">Fecha de nacimiento</label >
 	  <br>
@@ -54,7 +54,7 @@
 	  <br><br>
 	  <label for="telefono" min="6" max="6">Teléfono móvil</label>
 	  <br>
-	  <input id="telefono" name="telefono" required="required">
+	  <input id="telefono" name="telefono" pattern="[0-9]{9}">
 	  <br><br>
 	  <label for="correo">Tu dirección de correo electrónico actual</label>
 	  <br>

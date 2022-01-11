@@ -3,6 +3,9 @@ window.addEventListener("load", inicio);
 function inicio(){
     let formulario = document.getElementById('confirmar');
     formulario.addEventListener('click', setCookie);
+
+    const respuesta1 = document.getElementById('habitacion');
+    respuesta1.addEventListener('blur', existenombre);
 }
 
 function setCookie(){
@@ -20,7 +23,7 @@ function setCookie(){
 }
 
 
-function getCookie(){
+function existenombre(){
     //recojo el usuario y la habitación
     var nombreValidar = document.getElementById("nombre").value;   
     var habitacionValidar= document.getElementById("habitacion").value;  
@@ -42,18 +45,7 @@ function getCookie(){
         
         // const output = document.getElementById('cookie-value')
         // output.textContent = cafe;
-    }
-
-
-    /*lista = document.cookie.split(";")
-         for (i in lista) {
-             buscarCookie = lista[i].search(nombreValidar)
-             if (buscarCookie > -1) {micookie=lista[i]}
-             }
-         igual = micookie.indexOf("=")
-         valor = micookie.substring(igual+1)
-         return valor*/
-         
+    } 
 }
 
 

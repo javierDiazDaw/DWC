@@ -75,11 +75,8 @@ function lista(){
         parrafo.setAttribute("class" , "product-desc");
         var textoRef = document.createTextNode(arrayJuguetes[i].ref);
         parrafo.appendChild(textoRef);         
-        div3.appendChild(parrafo);
-        
+        div3.appendChild(parrafo);        
     }
-
-    
 }
 
 
@@ -89,11 +86,7 @@ function desplegable(){
   for (let i = 0; i < foto.length; i++) {
     
     foto[i].addEventListener('click', ocultarMostrar);
-  }
-  
-  
-  
-
+  }  
 }
 
 function ocultarMostrar(){

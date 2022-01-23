@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+</head>
+<body>
+    <script>
+        var p1 = document.createElement("p");
+        var txt1= document.createTextNode("texto 1");
+        p1.appendChild(txt1);
+        var p2 = document.createElement("p");
+        var txt2= document.createTextNode("texto 2");
+        p2.appendChild(txt2);
+        var p3 = document.createElement("p");
+        var txt3= document.createTextNode("texto 3");
+        p3.appendChild(txt3);
+
+        var espacio = document.createElement("br");
+
+        document.body.appendChild(p1);
+        document.body.appendChild(p2);
+        document.body.appendChild(p3);
+        document.body.appendChild(espacio);
+        document.body.appendChild(espacio);
+
+        var coger = document.getElementsByTagName("p");
+        var contenido = coger[2].innerHTML;
+        var texto = document.createTextNode(contenido);
+        var pTexto1 = document.createElement("p");
+        pTexto1.appendChild(texto);
+        document.body.appendChild(pTexto1);
+        
+        
+
+    </script>
+
+    
+
+
+</body>
+</html>

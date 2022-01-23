@@ -3,13 +3,18 @@ window.addEventListener('load', lista);
 function lista(){
 
     var datosJson = [
-        {src:"/img/img1.jpg", desc: "descripcion1", specs: ["spec1.1", "spec1.2"]},
-        {src:"/img/img2.jpg", desc: "descripcion2", specs: ["spec2.1", "spec2.2"]},
+        {src:"/img/img1.jpg", 
+        desc: "Coche de carreras", 
+        specs: ["plastico", "12€"]},
+
+        {src:"/img/img1.jpg", 
+        desc: "Spiderman desmontable", 
+        specs: ["madera", "7€"]},
         ];
 
     var div = document.createElement("div");
     var h1 = document.createElement("h1");
-    textSub = document.createTextNode("Subtituloo");
+    textSub = document.createTextNode("Tienda de juguetes");
     h1.appendChild(textSub);
     div.appendChild(h1);
 

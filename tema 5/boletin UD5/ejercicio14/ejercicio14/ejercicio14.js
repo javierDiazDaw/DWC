@@ -16,10 +16,10 @@ function setCookie(){
     var cafe = (document.forms["formulario"].cafe.value);   
 
     //envía las cookies
-   document.cookie = nombreValidar+", "+habitacionValidar+", "+cafe ;
+   document.cookie = nombreValidar + habitacionValidar+" = "+cafe ;
 
    //recarga la página   
-   location.reload()
+   location.reload();
 }
 
 

@@ -91,8 +91,10 @@ function desplegable(){
 
 function ocultarMostrar(){
 
+  var h1 = document.getElementsByTagName("h1")[0];
   if (this.nextSibling.style.display=='none') {
     visible = "";
+    
   }else{
     visible = "none";
   }
@@ -108,12 +110,15 @@ function ocultarMostrar(){
 function ocultarMostrarTitulo(){
 
     var div = document.getElementsByTagName('div')[0];
+    var h1 = document.getElementsByTagName("h1")[0];
   
     if (div == undefined){
       lista();
       desplegable();
+      h1.firstChild.nodeValue = "OCULTAR JUGUETES";
     }else{
       div.remove();
+      h1.firstChild.nodeValue = "MOSTRAR JUGUETES";
     }
     
   }  

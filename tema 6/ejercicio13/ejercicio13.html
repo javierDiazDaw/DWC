@@ -1,0 +1,24 @@
+<html>
+<head>
+    <style>img { width: 100px;}</style>
+<script type="text/javascript">
+
+function sigueme()
+{
+//Capto las coordenadas del puntero.
+var x = window.event.x;
+var y = window.event.y;
+
+//Y se las coloco al div.
+document.getElementsByTagName("img")[0].style.left = x + "px";
+document.getElementsByTagName("img")[0].style.top = y + "px";
+}
+
+</script>
+</head>
+
+<BODY onmousemove="sigueme();">
+<img src="http://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c325.png" style="position: absolute; left: 100px; top: 50px;" >
+
+</BODY>
+</html>

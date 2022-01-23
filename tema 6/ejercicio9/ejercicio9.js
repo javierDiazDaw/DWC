@@ -1,77 +1,84 @@
-window.addEventListener("load",iniciar)
+window.addEventListener('load', iniciar);
 
 function iniciar(){
-    cuerpo();
+    lista();
     desplegable();
 }
 
+function lista(){
 
-function cuerpo(){
+    var datosJson = [
+        {src:"https://sucursaldefelicidad.es/wp-content/uploads/2018/10/Coche-Juguete-Beetle-Classical-Rosa.jpg", 
+        desc: "Coche de carreras", 
+        specs: ["plastico", "12€"]},
 
-    var json =[{src:"/img/img1.jpg", desc: "descripcion1", specs: ["spec11", "spec12"]},
-        {src:"/img/img2.jpg", desc: "descripcion2", specs: ["spec21", "spec22"]}]
-        
+        {src:"https://static.fnac-static.com/multimedia/Images/ES/NR/e7/2a/15/1387239/1520-1/tsp20170829124205/Figura-de-madera-Marvel-Spiderman.jpg", 
+        desc: "Spiderman desmontable", 
+        specs: ["madera", "7€"]},
+        ];
 
     var div = document.createElement("div");
-    document.body.appendChild(div);
-
-    div.setAttribute("id","todos-los-viajes");
-    
-    var h1= document.createElement("h1");
-    var txt1=document.createTextNode("Subtituloo");
-    h1.appendChild(txt1);
+    var h1 = document.createElement("h1");
+    textSub = document.createTextNode("Tienda de juguetes");
+    h1.appendChild(textSub);
     div.appendChild(h1);
 
-    var ul = document.createElement("ul");
-    div.appendChild(ul);
-
-    for(var i=0; i<json.length; i++){
-        var li=document.createElement("li");
-        var img=document.createElement('img');
-        img.setAttribute("src",json[i]["src"]);
-        li.appendChild(img);
-
-        
-        var parr= document.createElement("p");
-        var txt2= document.createTextNode(json[i]["desc"]);
-        parr.appendChild(txt2);
-        li.appendChild(parr);
-
-        
-        var ul1 = document.createElement("ul");
-        ul1.setAttribute("class","specs");
-        li.appendChild(ul1);
-        for (let z = 0; z < json[i]["specs"].length; z++) {
-            var specsLi = document.createElement("li");
-            var txt3 = document.createTextNode(json[i]["specs"][z])
-            specsLi.appendChild(txt3);
-            ul1.appendChild(specsLi);
-        }
-
-        ul.appendChild(li);
-    }
-
-}
-
-function desplegable (){
-    var fotos = document.getElementsByTagName('img');
-
-    for (let i = 0; i<fotos.length; i++){
-        fotos[i].addEventListener('click', ocultarMostrar);
-    }
-}
-
-function ocultarMostrar(){
+    var ul = document.createElement("ul");      
     
-    if (this.nextSibling.style.visibility=="hidden") {
-        visible="visible";
-    } else{
-        visible="hidden";
-    }
+    for (let i = 0; i < datosJson.length; i++) {
+        
+        var li = document.createElement("li");
 
-    var padre = this.parentNode;
-    var arrayHijos = padre.childNodes;
-    for(let z= 1; z<arrayHijos.length; z++){
-        arrayHijos[z].style.visibility=visible;
+        var imagen = document.createElement("img");
+        imagen.setAttribute("src", datosJson[i].src);
+        li.appendChild(imagen); 
+        
+        var p = document.createElement("p");
+        var textoP = document.createTextNode(datosJson[i].desc);
+        p.appendChild(textoP);
+        li.appendChild(p);
+        
+        var ul2 = document.createElement("ul");
+        ul2.setAttribute("class", "spec");
+        li.appendChild(ul2);
+
+       for (let j = 0; j < datosJson[i].specs.length; j++) {
+           
+            var li2 = document.createElement("li");
+            var texto2 = document.createTextNode(datosJson[i].specs[j]);
+            li2.appendChild(texto2);
+            ul2.appendChild(li2); 
+       } 
+       ul.appendChild(li);
     }
+        
+    div.appendChild(ul);    
+    document.body.appendChild(div);
+}
+
+function desplegable(){
+
+    var imagen = document.getElementsByTagName("img");
+    for (let i = 0; i < imagen.length; i++) {
+        imagen[i].addEventListener("click", mostrarElementos);
+        
+    }
+}
+
+function mostrarElementos(){
+
+    if (this.nextSibling.style.display=='none') {
+       var visible = "";
+      }else{
+        visible = "none";
+      }
+      var padre = this.parentNode;
+      var arrayHijos = padre.childNodes;
+      for (let i = 1; i < arrayHijos.length; i++) {
+        arrayHijos[i].style.display=visible;
+
+      }
+
+      
+
 }

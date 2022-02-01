@@ -1,8 +1,7 @@
 
 $(function(){
 
-    $("#boton").click(function(){
-       
+    $("#boton").click(function(){       
         
         $.ajax({
             
@@ -20,7 +19,6 @@ $(function(){
             }
         });
     });
-
 });
 
 

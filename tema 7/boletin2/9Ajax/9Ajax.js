@@ -1,18 +1,18 @@
+
 $(function () {
 
-    $("button").click(function () {
-
-            
+    $("button").click(function () {            
         
         $.ajax({
-            data: parametros,
+           
             url: '9Ajax.php',
             type: 'post',
             beforeSend: function () {
-                $(data).html("Procesando, espere por favor...");
+                $('#divId').html("Procesando, espere por favor...");
             },
-            success: function (sePuedePonerLoQueQuieras) {
-                $(data).html(sePuedePonerLoQueQuieras);
+            success: function (response) {
+                response = JSON.parse(response);
+                $('#divId').html(response);
             }
         });    
     });

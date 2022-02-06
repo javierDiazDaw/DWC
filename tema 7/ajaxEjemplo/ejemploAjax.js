@@ -6,8 +6,9 @@ $(function(){
         var valorCaja1 = $("#valor1").val();
         var valorCaja2 = $("#valor2").val();
 
-        //json
+        //creación del json
         var parametros = {
+            //clave       //valor
             "valorCaja1": valorCaja1,
             "valorCaja2": valorCaja2
         };

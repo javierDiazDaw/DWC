@@ -114,7 +114,7 @@ $(document).ready(function(){
 	});
 	function destacado() {
 		$("img").click(function() {
-			$(this).parent().prev().children("div.x11").children('div.pr').toggleClass('destacada');
+			$(this).parent().prev().children("div.x11").children('div.pr').addClass('destacado');
 		});
 	}
 	function mostrarOcultar() {

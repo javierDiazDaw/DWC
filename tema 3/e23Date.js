@@ -1,6 +1,3 @@
-
-
-
 var numF = parseInt(prompt("Elige el número de fechas"));
 
 var fecha = prompt("Escribe la primera fecha","dd/mm/aaaa");
@@ -24,11 +21,8 @@ for (var i = 1; i < numF; i++) {
 	
 	if (fechaMayor < fecha){
 
-		fechaMayor = fecha;
-
-		
+		fechaMayor = fecha;		
 	}
-
 }
 
 var fechaConvertida = new Date(fechaMayor);

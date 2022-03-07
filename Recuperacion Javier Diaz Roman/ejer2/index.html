@@ -1,0 +1,41 @@
+<!--Javier Diaz Roman 2ºDAW-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <script>
+        var altura = 380;
+        var anchura = 630;
+
+        //Ventana centro
+        var y = parseInt((window.screen.height / 2) - (altura / 2));
+        var x = parseInt((window.screen.width / 2) - (anchura / 2));
+
+        //Funcion de mostrar ventana con tiempo de espera incluido
+        function mostrarVentana() {
+            clearInterval(miVar);
+
+            //Creacion de ventana
+            var nuevaVentana;
+            nuevaVentana = window.open("", "", 'width=' + anchura + ',height=' + altura + ',top=' + y + ',left=' + x + ',toolbar=no,location=no,status=no,menubar=no,scrollbars=no,directories=no,resizable=no');
+            nuevaVentana.document.write("Hola, Bienvenido ");
+            nuevaVentana.document.write("<a href='#' onclick='javascript:window.close()'>Cerrar ventana</a>");           
+        }
+
+        //funcion de cerrar ventana
+        function cerrarVentana(){
+                window.close();
+            }
+
+        //tiempo de espera al cargar la pagina
+        var miVar = setInterval(mostrarVentana, 5000);
+    </script>
+</body>
+</html>

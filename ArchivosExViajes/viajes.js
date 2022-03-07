@@ -65,7 +65,7 @@ $(function(){
 
             //funcion para añadir la clase 'descatada'
             $("img").mouseover(function(){
-                $(this).parent().parent().sibling("spanNoche.por-noche").toggleClass('destacada');                
+                $(this).parent().parent().find(".precio").toggleClass('destacada');                
             });
 
             $("spanPie").mouseover(function(){

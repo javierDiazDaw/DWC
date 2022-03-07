@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+
+         var codigo = prompt("Introduzca el codigo");
+    
+        var validar = /^[0-9]{4}$/;
+    
+        var dia = codigo.substring(0, 2);
+    
+        var mes = codigo.substring(2, 4);
+    
+        let thisYear = new Date().getFullYear();
+        fecha = new Date(thisYear, (mes - 1), dia).getTime();
+    
+    
+        //document.write("cumple" + fecha);
+    
+        var hoy = Date.now();
+        document.write("hoy" + hoy);
+        var ms = fecha - hoy;
+        var minutos = 0;
+        var segundos = 5;
+
+        if(ms > 0){
+            minutos = parseInt(ms / 1000 / 60);
+            ms -= minutos * 60 * 1000;
+            segundos = parseInt(ms / 1000); 
+
+        }
+    
+       
+
+        var v = window.open("", "", "width=200,height=100, left=1500px, top=800px");
+       v.document.write("<h2></h2>");
+       
+
+    //document.write(dia);
+    //document.write(mes);
+    //document.write("minutos" + minutos);
+    //document.write("segundos" + segundos);
+
+
+
+    var myVar = setInterval(myTimer, 1000);
+
+    function myTimer() {
+
+        if(segundos==0 && minutos != 0){
+            minutos--;
+            segundos = 59;
+        }else{
+            if(segundos != 0){
+                segundos--;
+            }
+        }
+
+        v.document.getElementsByTagName("h2")[0].textContent = minutos+":"+segundos;
+
+        //v.document.write (minutos+":"+segundos + "<br>");
+        
+        if(minutos == 0 && segundos == 0){
+
+            v.close();
+            var b = window.open("", "", "width=200,height=100, left=1500px, top=800px");
+            b.document.write("Bye bye world");
+            clearInterval(myVar);
+
+        }
+    }
+    //setTimeout(stopTimer, 5000) // stop after 5s
+
+
+   // function stopTimer() {
+        
+   // }
+
+
+
+    /*     var myVar = setInterval(myTimer, 1000);
+    
+        function myTimer() {
+    
+            var ms = fecha - hoy;
+    
+            var minutos = parseInt(ms / 1000 / 60);
+            ms -= minutos * 60 * 1000;
+            var segundos = parseInt(ms / 1000);
+    
+    
+            var tiempoActual = minutos + ":" + segundos;
+            document.write(tiempoActual + "<br>");
+        }
+        myTimer(); // execute
+        setTimeout(stopTimer, 5000) // stop after 5s
+    
+    
+        function stopTimer() {
+            clearInterval(myVar);
+        } */
+
+</script>
